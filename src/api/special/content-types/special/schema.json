@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "specials",
+  "info": {
+    "singularName": "special",
+    "pluralName": "specials",
+    "displayName": "Special",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Price": {
+      "type": "string",
+      "default": "0",
+      "required": true
+    },
+    "Calories": {
+      "type": "string",
+      "required": true,
+      "default": "0"
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

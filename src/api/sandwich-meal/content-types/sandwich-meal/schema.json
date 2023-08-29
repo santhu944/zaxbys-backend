@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sandwich_meals",
+  "info": {
+    "singularName": "sandwich-meal",
+    "pluralName": "sandwich-meals",
+    "displayName": "Sandwich Meal"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Price": {
+      "type": "string",
+      "required": true,
+      "default": "0"
+    },
+    "Calories": {
+      "type": "string",
+      "required": true,
+      "default": "0"
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
